@@ -24,12 +24,12 @@ locals {
 }
 
 resource "aws_lambda_function" "terraform_lambda_demo" {
-  filename         = local.build_file
+  filename         = "target/demo-1.0.0.jar"
   function_name    = "terraformLambdaDemo"
   role             = "arn:aws:iam::695663959248:role/service-role/lambdaDemo-role-43z4u7dd"
   handler          = "com.javaxp.lambda.demo.LambdaFunctionHandler::handleRequest"
   runtime          = "java11"
-  source_code_hash = filebase64sha256("${local.build_file}")
+  source_code_hash = filebase64sha256("target/demo-1.0.0.jar")
   tags = {
     Name = "terraformLambdaDemo"
   }
