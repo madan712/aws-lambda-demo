@@ -2,3 +2,7 @@
 /.settings/
 /.project
 .classpath
+
+.terraform
+.terraform.lock.hcl
+terraform.tfstate.backup
