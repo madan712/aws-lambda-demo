@@ -18,7 +18,7 @@ public class LambdaFunctionHandler
 	@Override
 	public APIGatewayProxyResponseEvent handleRequest(APIGatewayProxyRequestEvent event, Context context) {
 		LambdaLogger logger = context.getLogger();
-		logger.log("event: " + gson.toJson(event));
+		logger.log("event : " + gson.toJson(event));
 		return new APIGatewayProxyResponseEvent().withStatusCode(200).withBody("Hello " + event.getBody() + "!");
 	}
 }
