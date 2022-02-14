@@ -1,8 +1,7 @@
 steps:
   - label: ":package: Maven build"
-    command:
-        - mvn -X clean install
-        - echo "Build successfully!"
+    command: mvn package
+    artifact_paths: "target/demo*.jar"
   - label: ":whale: Terraform"
     command:
         - terraform init && terraform apply
