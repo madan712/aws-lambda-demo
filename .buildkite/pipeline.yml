@@ -4,5 +4,5 @@ steps:
     artifact_paths: "target/demo*.jar"
   - label: ":whale: Terraform"
     command:
-        - terraform init && terraform apply
+        - terraform init -input=false && terraform plan -out=tfplan -input=false && terraform apply -input=false tfplan
         - echo "Uploaded to AWS!"
