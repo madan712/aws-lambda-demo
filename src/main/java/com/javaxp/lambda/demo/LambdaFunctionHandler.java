@@ -13,12 +13,15 @@ import com.google.gson.GsonBuilder;
 public class LambdaFunctionHandler
 		implements RequestHandler<APIGatewayProxyRequestEvent, APIGatewayProxyResponseEvent> {
 
+	private static final String GREETING = "Hello,  how are you %s!";
+
 	private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
 	@Override
 	public APIGatewayProxyResponseEvent handleRequest(APIGatewayProxyRequestEvent event, Context context) {
 		LambdaLogger logger = context.getLogger();
 		logger.log("event : " + gson.toJson(event));
-		return new APIGatewayProxyResponseEvent().withStatusCode(200).withBody("Hello " + event.getBody() + "!");
+		return new APIGatewayProxyResponseEvent().withStatusCode(200)
+				.withBody(String.format(GREETING, event.getBody()));
 	}
 }

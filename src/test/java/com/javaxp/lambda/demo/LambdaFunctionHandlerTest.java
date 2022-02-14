@@ -15,12 +15,15 @@ import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyResponseEvent
  */
 public class LambdaFunctionHandlerTest {
 
+	private static final String GREETING = "Hello,  how are you %s!";
+	private static final String NAME = "Madan";
+
 	private static APIGatewayProxyRequestEvent event;
 
 	@BeforeClass
 	public static void createInput() throws IOException {
 		event = new APIGatewayProxyRequestEvent();
-		event.setBody("Madan");
+		event.setBody(NAME);
 	}
 
 	private Context createContext() {
@@ -34,6 +37,6 @@ public class LambdaFunctionHandlerTest {
 		LambdaFunctionHandler handler = new LambdaFunctionHandler();
 		Context ctx = createContext();
 		APIGatewayProxyResponseEvent output = handler.handleRequest(event, ctx);
-		Assert.assertEquals("Hello " + event.getBody() + "!", output.getBody());
+		Assert.assertEquals(String.format(GREETING, NAME), output.getBody());
 	}
 }
