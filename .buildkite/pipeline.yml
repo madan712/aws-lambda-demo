@@ -1,3 +1,5 @@
 steps:
-  - label: "Loading pipeline steps"
-    command: echo "Hello!"
+  - label: "Maven build"
+    command:
+        - mvn -X clean install
+        - echo "Build successfully!"
