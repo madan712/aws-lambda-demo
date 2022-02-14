@@ -5,5 +5,5 @@ steps:
         - echo "Build successfully!"
   - label: ":whale: Terraform"
     command:
-        - terraform apply
+        - terraform init && terraform apply
         - echo "Uploaded to AWS!"
