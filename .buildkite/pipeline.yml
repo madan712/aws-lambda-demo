@@ -1,9 +1,9 @@
 steps:
-  - label: "Maven build"
+  - label: ":package: Maven build"
     command:
         - mvn -X clean install
         - echo "Build successfully!"
-  - label: "Terraform"
+  - label: ":whale: Terraform"
     command:
         - terraform apply
         - echo "Uploaded to AWS!"
