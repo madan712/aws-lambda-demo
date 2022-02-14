@@ -1,0 +1,3 @@
+steps:
+  - label: "Loading pipeline steps"
+    command: echo "Hello!"
