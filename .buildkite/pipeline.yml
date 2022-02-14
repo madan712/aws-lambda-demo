@@ -3,3 +3,7 @@ steps:
     command:
         - mvn -X clean install
         - echo "Build successfully!"
+  - label: "Terraform"
+    command:
+        - terraform apply
+        - echo "Uploaded to AWS!"
