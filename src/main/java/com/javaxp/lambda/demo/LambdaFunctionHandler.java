@@ -12,7 +12,7 @@ import com.google.gson.GsonBuilder;
 public class LambdaFunctionHandler
 		implements RequestHandler<APIGatewayProxyRequestEvent, APIGatewayProxyResponseEvent> {
 
-	private static final String GREETING = "Good eveing %s!";
+	private static final String GREETING = "Good evening %s!";
 
 	private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
@@ -21,7 +21,7 @@ public class LambdaFunctionHandler
 		// DDLambda ddl = new DDLambda(event, context);
 
 		LambdaLogger logger = context.getLogger();
-		logger.log("{}" + gson.toJson(event));
+		logger.log(gson.toJson(event));
 
 		// ddl.finish();
 		return new APIGatewayProxyResponseEvent().withStatusCode(200)
