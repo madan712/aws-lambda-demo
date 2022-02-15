@@ -25,7 +25,7 @@ locals {
 
 resource "aws_lambda_function" "aws_lambda_demo" {
   filename      = local.build_file
-  function_name = "terraformLambdaDemo"
+  function_name = "awsLambdaDemo"
   role          = "arn:aws:iam::695663959248:role/service-role/lambdaDemo-role-43z4u7dd"
   handler       = "com.javaxp.lambda.demo.LambdaFunctionHandler::handleRequest"
   runtime       = "java11"

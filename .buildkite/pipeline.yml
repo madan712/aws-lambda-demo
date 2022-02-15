@@ -3,5 +3,5 @@ steps:
     command: mvn package
   - label: ":whale: Terraform"
     command:
-        - terraform init && terraform apply -input=yes
+        - terraform init && terraform apply -input=false
         - echo "Uploaded to AWS!"
