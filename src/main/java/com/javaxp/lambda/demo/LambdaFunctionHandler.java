@@ -6,7 +6,6 @@ import com.amazonaws.services.lambda.runtime.RequestHandler;
 
 import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyRequestEvent;
 import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyResponseEvent;
-import com.datadoghq.datadog_lambda_java.DDLambda;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -19,13 +18,12 @@ public class LambdaFunctionHandler
 
 	@Override
 	public APIGatewayProxyResponseEvent handleRequest(APIGatewayProxyRequestEvent event, Context context) {
-		
-		DDLambda ddl = new DDLambda(event, context);
-		
+		// DDLambda ddl = new DDLambda(event, context);
+
 		LambdaLogger logger = context.getLogger();
-		logger.log("event : " + gson.toJson(event));
-		
-		ddl.finish();
+		logger.log("{}" + gson.toJson(event));
+
+		// ddl.finish();
 		return new APIGatewayProxyResponseEvent().withStatusCode(200)
 				.withBody(String.format(GREETING, event.getBody()));
 	}
