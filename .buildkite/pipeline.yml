@@ -5,5 +5,5 @@ steps:
         - echo "Package created successfully!"
   - label: ":whale: Terraform"
     command:
-        - terraform init && terraform apply
+        - terraform init && terraform apply -auto-approve
         - echo "Uploaded to AWS!"
