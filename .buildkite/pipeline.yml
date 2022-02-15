@@ -1,7 +1,9 @@
 steps:
   - label: ":package: Maven build"
-    command: mvn package
+    command:
+        - mvn package
+        - echo "Package created successfully!"
   - label: ":whale: Terraform"
     command:
-        - terraform init && terraform apply -input=false
+        - terraform init && terraform apply
         - echo "Uploaded to AWS!"
