@@ -30,6 +30,6 @@ resource "aws_lambda_function" "aws_lambda_demo" {
   handler       = "com.javaxp.lambda.demo.LambdaFunctionHandler::handleRequest"
   runtime       = "java11"
   tags = {
-    Name = "awsLambdaDemo"
+    Name = "LambdaDemo"
   }
 }
