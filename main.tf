@@ -19,16 +19,18 @@ provider "aws" {
   region  = "us-east-1"
 }
 
-locals {
-  build_file = "**/target/demo-1.0.0.jar"
+data "archive_file" "lambda_zip" {
+  type        = "zip"
+  source_dir  = "./target/demo-1.0.0.jar"
+  output_path = "./target/demo.zip"
 }
 
 resource "aws_lambda_function" "aws_lambda_demo" {
-  filename         = local.build_file
+  filename         = data.archive_file.lambda_zip.output_path
   function_name    = "awsLambdaDemo"
   role             = "arn:aws:iam::695663959248:role/service-role/lambdaDemo-role-43z4u7dd"
   handler          = "com.javaxp.lambda.demo.LambdaFunctionHandler::handleRequest"
   runtime          = "java11"
-  source_code_hash = filebase64sha256(local.build_file)
+  source_code_hash = data.archive_file.lambda_zip.output_base64sha256
 }
 
