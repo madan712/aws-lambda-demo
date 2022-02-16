@@ -24,10 +24,11 @@ locals {
 }
 
 resource "aws_lambda_function" "aws_lambda_demo" {
-  filename      = local.build_file
-  function_name = "awsLambdaDemo"
-  role          = "arn:aws:iam::695663959248:role/service-role/lambdaDemo-role-43z4u7dd"
-  handler       = "com.javaxp.lambda.demo.LambdaFunctionHandler::handleRequest"
-  runtime       = "java11"
+  filename         = local.build_file
+  function_name    = "awsLambdaDemo"
+  role             = "arn:aws:iam::695663959248:role/service-role/lambdaDemo-role-43z4u7dd"
+  handler          = "com.javaxp.lambda.demo.LambdaFunctionHandler::handleRequest"
+  runtime          = "java11"
+  source_code_hash = filebase64sha256(local.build_file)
 }
 
