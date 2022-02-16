@@ -21,8 +21,8 @@ provider "aws" {
 
 data "archive_file" "lambda_zip" {
   type        = "zip"
-  source_dir  = "./target/demo-1.0.0.jar"
-  output_path = "./target/demo.zip"
+  source_dir  = "target/demo-1.0.0.jar"
+  output_path = "target/demo.zip"
 }
 
 resource "aws_lambda_function" "aws_lambda_demo" {
