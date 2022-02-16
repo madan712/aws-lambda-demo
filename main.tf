@@ -20,7 +20,7 @@ provider "aws" {
 }
 
 locals {
-  build_file = "target/demo-1.0.0.jar"
+  build_file = "**/target/demo-1.0.0.jar"
 }
 
 resource "aws_lambda_function" "aws_lambda_demo" {
@@ -29,6 +29,6 @@ resource "aws_lambda_function" "aws_lambda_demo" {
   role             = "arn:aws:iam::695663959248:role/service-role/lambdaDemo-role-43z4u7dd"
   handler          = "com.javaxp.lambda.demo.LambdaFunctionHandler::handleRequest"
   runtime          = "java11"
-  source_code_hash = "${path.module}/${local.build_file}"
+  source_code_hash = local.build_file
 }
 
