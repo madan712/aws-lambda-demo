@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.javaxp.lambda</groupId>
   <artifactId>demo</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.3</version>
   <build>
     <plugins>
       <plugin>
@@ -55,5 +55,12 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+  <distributionManagement>
+    <repository>
+      <id>javaxp-repo</id>
+      <name>javaxp-repo</name>
+      <url>https://javaxp-695663959248.d.codeartifact.us-east-1.amazonaws.com/maven/repo/</url>
+    </repository>
+  </distributionManagement>
 </project>
 

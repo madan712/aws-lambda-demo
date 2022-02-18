@@ -3,7 +3,7 @@
 
 	<groupId>com.javaxp.lambda</groupId>
 	<artifactId>demo</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.3</version>
 	<packaging>jar</packaging>
 
 	<build>
@@ -66,26 +66,21 @@
 			<version>1.2.1</version>
 		</dependency>
 
-
-		<!-- <dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.18.22</version>
-			<scope>provided</scope>
-		</dependency>-->
-
-
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
 			<version>2.9.0</version>
 		</dependency>
 
-		<!-- <dependency>
-			<groupId>com.datadoghq</groupId>
-			<artifactId>datadog-lambda-java</artifactId>
-			<version>1.4.3</version>
-		</dependency>-->
-
 	</dependencies>
+
+	<distributionManagement>
+		<repository>
+			<id>javaxp-repo</id>
+			<name>javaxp-repo</name>
+			<url>https://javaxp-695663959248.d.codeartifact.us-east-1.amazonaws.com/maven/repo/</url>
+		</repository>
+	</distributionManagement>
+
+
 </project>
