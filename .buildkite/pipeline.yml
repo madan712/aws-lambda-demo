@@ -1,6 +1,8 @@
 steps:
   - label: ":package: Maven build"
-    command: mvn package
+    command:
+         - mvn package
+         - echo "Build created successfully!"
   
   - wait
   
