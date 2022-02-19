@@ -1,6 +1,8 @@
 steps:
   - label: ":package: Maven build"
-    command: mvn package
+    command:
+        - cd C:/WORKSPACE/2022/aws-lambda-demo
+        - mvn package
     
   - wait
   
