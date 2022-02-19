@@ -1,7 +1,7 @@
 steps:
   - label: ":package: Maven build"
     command:
-        - mvn package
+        - mvn -X clean install
         - echo "Package created successfully!"
   - label: ":whale: Terraform"
     command:
