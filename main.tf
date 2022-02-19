@@ -20,7 +20,7 @@ provider "aws" {
 }
 
 locals {
-  build_file = "demo-1.0.3.jar"
+  build_file = "target/demo-1.0.0.jar"
 }
 
 resource "aws_lambda_function" "aws_lambda_demo" {
