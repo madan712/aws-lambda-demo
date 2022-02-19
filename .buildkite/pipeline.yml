@@ -1,9 +1,9 @@
 steps:
   - label: ":package: Maven build"
-    command:
-        - cd C:/WORKSPACE/2022/aws-lambda-demo
-        - mvn package
-        - echo "Package created successfully!"
+    command: mvn package
+  
+  - wait
+  
   - label: ":whale: Terraform"
     command:
         - terraform init && terraform apply -auto-approve
