@@ -1,9 +1,7 @@
 steps:
   - label: ":package: Maven build"
-    command:
-         - mvn package
-         - echo "Build created successfully!"
-  
+    command: mvn package
+    
   - wait
   
   - label: ":whale: Terraform"
