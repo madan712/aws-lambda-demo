@@ -55,12 +55,5 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-  <distributionManagement>
-    <repository>
-      <id>javaxp-repo</id>
-      <name>javaxp-repo</name>
-      <url>https://javaxp-695663959248.d.codeartifact.us-east-1.amazonaws.com/maven/repo/</url>
-    </repository>
-  </distributionManagement>
 </project>
 
