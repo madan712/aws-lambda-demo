@@ -20,7 +20,7 @@ provider "aws" {
 }
 
 locals {
-  build_file = "C:/buildkite-agent/builds/MadanPC-1/javaxp/aws-lambda-pipeline/target/demo-1.0.3.jar"
+  build_file = "C:\buildkite-agent\builds\MadanPC-1\javaxp\aws-lambda-pipeline\target\demo-1.0.3-shaded.jar"
 }
 
 resource "aws_lambda_function" "aws_lambda_demo" {
