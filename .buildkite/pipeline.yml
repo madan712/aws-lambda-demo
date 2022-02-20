@@ -1,5 +1,5 @@
 steps:
-  - label: ":package: Maven builds"
+  - label: ":package: Maven build"
     plugins:
         - madan712/java-maven:
             artifact: demo
