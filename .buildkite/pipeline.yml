@@ -1,6 +1,6 @@
 steps:
   - label: ":package: Maven build"
     plugins:
-        - file://C:/WORKSPACE/2022/aws-lambda-demo/.buildkite/plugins/java-maven-buildkite-plugin:
+        - "file://C:/WORKSPACE/2022/aws-lambda-demo/.buildkite/plugins/java-maven-buildkite-plugin": ~
             artifact: demo
             version: "1.0"
