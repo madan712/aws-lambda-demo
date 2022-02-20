@@ -5,14 +5,12 @@ steps:
         
   - wait
   
-  - pipe-gen:
-    type: step/pipeline-generator
-  
   - label: ":whale: Terraform"
     command:
+        - echo $(buildkite-agent meta-data get "build")
+        - echo {buildkite-agent meta-data get "build"}
         - echo $(metadata.build)
         - echo {metadata.build}
-        - echo $(buildkite-agent meta-data get "build")
         - terraform init && terraform apply -auto-approve -var "build=madan"
         - echo "Uploaded to AWS!"
         
