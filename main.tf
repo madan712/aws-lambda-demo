@@ -1,18 +1,13 @@
 variable "build" {}
 
 terraform {
-  backend "remote" {
-    organization = "JavaXp"
-    workspaces {
-      name = "demo-workspaces"
-    }
-  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 3.27"
     }
   }
+
   required_version = ">= 0.14.9"
 }
 
