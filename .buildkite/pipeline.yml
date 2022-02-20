@@ -7,6 +7,6 @@ steps:
   
   - label: ":whale: Terraform"
     command:
-        - terraform init && terraform apply -auto-approve -var build=buildkite-agent meta-data get "build"
+        - terraform init && terraform apply -auto-approve -var build={buildkite-agent meta-data get "build"}
         - echo "Uploaded to AWS!"
         
