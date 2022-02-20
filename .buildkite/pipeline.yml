@@ -1,5 +1,4 @@
 steps:
   - label: ":package: Deploy"
     plugins:
-        - maven-terraform:
-    
+        - maven-terraform#v1.0:
