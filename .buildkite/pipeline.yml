@@ -1,4 +1,4 @@
 steps:
   - label: ":package: Deploy"
-    command: bash scripts/deploy.sh
+    command: scripts/deploy.sh
     
