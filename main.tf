@@ -1,4 +1,4 @@
-variable "build_path" {}
+variable "build" {}
 
 terraform {
   required_providers {
@@ -17,7 +17,7 @@ provider "aws" {
 }
 
 resource "aws_lambda_function" "aws_lambda_demo" {
-  filename      = var.build_path
+  filename      = var.build
   function_name = "awsLambdaDemo"
   role          = "arn:aws:iam::695663959248:role/service-role/lambdaDemo-role-43z4u7dd"
   handler       = "com.javaxp.lambda.demo.LambdaFunctionHandler::handleRequest"
