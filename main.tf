@@ -1,3 +1,5 @@
+variable "build" {}
+
 terraform {
   backend "remote" {
     organization = "JavaXp"
@@ -19,12 +21,8 @@ provider "aws" {
   region  = "us-east-1"
 }
 
-locals {
-  build_file = "target/demo-1.0.3.jar"
-}
-
 resource "aws_lambda_function" "aws_lambda_demo" {
-  filename      = local.build_file
+  filename      = var.build
   function_name = "awsLambdaDemo"
   role          = "arn:aws:iam::695663959248:role/service-role/lambdaDemo-role-43z4u7dd"
   handler       = "com.javaxp.lambda.demo.LambdaFunctionHandler::handleRequest"

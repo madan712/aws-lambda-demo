@@ -2,3 +2,11 @@ steps:
   - label: ":package: Maven build"
     plugins:
         - madan712/java-maven:
+        
+  - wait
+  
+  - label: ":whale: Terraform"
+    command:
+        - terraform init && terraform apply -var="build={metadata.build}"
+        - echo "Uploaded to AWS!"
+        
