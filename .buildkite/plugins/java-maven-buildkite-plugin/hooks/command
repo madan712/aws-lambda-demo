@@ -1,0 +1,7 @@
+#!/bin/bash
+set -euo pipefail
+
+ARTIFACT="$BUILDKITE_PLUGIN_JAVA_MAVEN_ARTIFACT"
+VERSION="$BUILDKITE_PLUGIN_JAVA_MAVEN_VERSION"
+
+echo "Hello plugin!"

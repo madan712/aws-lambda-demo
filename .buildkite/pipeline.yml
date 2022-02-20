@@ -1,10 +1,6 @@
 steps:
   - label: ":package: Maven build"
-    command:
-        - "mvn package"
-        - echo "Created build!"
-  
-  - label: ":whale: Terraform"
-    command:
-        - "terraform init"
-        - echo "Uploaded to AWS!"
+    plugins:
+        - file://C:/WORKSPACE/2022/aws-lambda-demo/.buildkite/plugins/java-maven-buildkite-plugin
+            artifact: demo
+            version: "1.0"
