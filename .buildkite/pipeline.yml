@@ -7,6 +7,6 @@ steps:
   
   - label: ":whale: Terraform"
     command:
-        - terraform init && terraform apply -var="build={metadata.build} -auto-approve"
+        - terraform init && terraform apply -auto-approve -var="build={metadata.build}"
         - echo "Uploaded to AWS!"
         
