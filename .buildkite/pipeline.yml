@@ -2,12 +2,3 @@ steps:
   - label: ":package: Maven build"
     plugins:
         - madan712/java-maven:
-        
-  - wait
-  
-  - label: ":whale: Terraform"
-    command:
-        - echo "$(buildkite-agent meta-data get build --default Ojas)"
-        - terraform init && terraform apply -auto-approve -var "build=madan"
-        - echo "Uploaded to AWS!"
-        
