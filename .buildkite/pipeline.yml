@@ -7,7 +7,7 @@ steps:
   
   - label: ":whale: Terraform"
     command:
-        - echo ${build.meta_data['build']}
+        - echo "$(buildkite-agent meta-data get build --default Ojas)"
         - terraform init && terraform apply -auto-approve -var "build=madan"
         - echo "Uploaded to AWS!"
         
