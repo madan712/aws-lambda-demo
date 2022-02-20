@@ -1,7 +1,4 @@
 steps:
-  - label: ":package: Maven build"
-    command:
-        - mvn clean package
-        - build=$(mvn -q -Dexec.executable=echo -Dexec.args='target/${project.artifactId}-${project.version}.${project.packaging}' --non-recursive exec:exec)
-        - echo "build: ${build}"
+  - label: ":package: Deploy"
+    command: ./scripts/deploy.sh
     
