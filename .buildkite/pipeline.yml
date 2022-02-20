@@ -3,4 +3,3 @@ steps:
     plugins:
         - madan712/java-maven:
             artifact: demo
-            version: "1.0"
