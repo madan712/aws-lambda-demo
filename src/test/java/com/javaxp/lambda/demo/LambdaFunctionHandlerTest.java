@@ -15,7 +15,7 @@ import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyResponseEvent
  */
 public class LambdaFunctionHandlerTest {
 
-	private static final String GREETING = "Happy learning %s!";
+	private static final String GREETING = "Happy birthday %s!";
 	private static final String NAME = "Madan";
 
 	private static APIGatewayProxyRequestEvent event;

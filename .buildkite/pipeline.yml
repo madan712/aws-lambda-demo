@@ -1,4 +1,4 @@
 steps:
   - label: ":package: Deploy"
-    command: bash scripts/deploy.sh
+    plugins: madan712/maven-terraform:
     
