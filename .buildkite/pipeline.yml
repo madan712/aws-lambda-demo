@@ -1,4 +1,5 @@
 steps:
   - label: ":package: Deploy"
-    plugins: madan712/maven-terraform:
+    plugins:
+        - madan712/maven-terraform:
     
