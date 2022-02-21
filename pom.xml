@@ -39,12 +39,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<configuration>
-					<checkModificationExcludes>
-						<checkModificationExclude>pom.xml</checkModificationExclude>
-						<checkModificationExclude>**</checkModificationExclude>
-					</checkModificationExcludes>
-				</configuration>
+				<version>2.5.3</version>
 			</plugin>
 
 			<plugin>
