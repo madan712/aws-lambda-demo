@@ -3,7 +3,7 @@
 
 	<groupId>com.javaxp.lambda</groupId>
 	<artifactId>demo</artifactId>
-	<version>1.0.5-SNAPSHOT</version>
+	<version>1.0.5</version>
 	<packaging>jar</packaging>
 
 	<build>
@@ -114,7 +114,7 @@
 
 	<scm>
 		<connection>scm:git:ssh://git@github.com/madan712/aws-lambda-demo.git</connection>
-	  <tag>HEAD</tag>
+	  <tag>demo-1.0.5</tag>
   </scm>
 
 
