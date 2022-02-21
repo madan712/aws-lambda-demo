@@ -110,8 +110,7 @@
 
 	<scm>
 		<connection>scm:git:ssh://git@github.com/madan712/aws-lambda-demo.git</connection>
-	  <tag>HEAD</tag>
-  </scm>
-
+		<tag>master</tag>
+	</scm>
 
 </project>
