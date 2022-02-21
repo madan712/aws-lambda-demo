@@ -3,7 +3,7 @@
 
 	<groupId>com.javaxp.lambda</groupId>
 	<artifactId>demo</artifactId>
-	<version>1.0.6-SNAPSHOT</version>
+	<version>1.0.6</version>
 	<packaging>jar</packaging>
 
 	<build>
@@ -42,6 +42,7 @@
 				<configuration>
 					<checkModificationExcludes>
 						<checkModificationExclude>pom.xml</checkModificationExclude>
+						<checkModificationExclude>**</checkModificationExclude>
 					</checkModificationExcludes>
 				</configuration>
 			</plugin>
@@ -114,7 +115,7 @@
 
 	<scm>
 		<connection>scm:git:ssh://git@github.com/madan712/aws-lambda-demo.git</connection>
-	  <tag>HEAD</tag>
+	  <tag>demo-1.0.6</tag>
   </scm>
 
 
