@@ -56,8 +56,8 @@
 
 	<scm>
 		<developerConnection>scm:git:ssh://git@github.com/madan712/aws-lambda-demo.git</developerConnection>
-	  <tag>HEAD</tag>
-  </scm>
+		<tag>HEAD</tag>
+	</scm>
 
 	<build>
 		<plugins>
