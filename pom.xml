@@ -56,10 +56,7 @@
 	</distributionManagement>
 
 	<scm>
-		<url>https://github.com/madan712/aws-lambda-demo</url>
-		<connection>scm:git:ssh://git@github.com/madan712/aws-lambda-demo.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/madan712/aws-lambda-demo.git</developerConnection>
-		<tag>HEAD</tag>
 	</scm>
 
 	<build>
@@ -69,10 +66,9 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.6.0</version>
 				<configuration>
-					<source>17</source>
-					<target>17</target>
+					<source>1.8</source>
+					<target>1.8</target>
 					<encoding>UTF-8</encoding>
-					<forceJavacCompilerUse>true</forceJavacCompilerUse>
 				</configuration>
 			</plugin>
 
@@ -92,17 +88,11 @@
 			</plugin>
 			-->
 
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-
-
-				<version>3.0.0-M1</version>
-				<configuration>
-					<tagNameFormat>@{project.artifactId}-@{project.version}</tagNameFormat>
-					<scmCommentPrefix>[skip ci] [maven]</scmCommentPrefix>
-				</configuration>
-
+				<version>2.4.2</version>
 			</plugin>
 
 			<plugin>
@@ -120,15 +110,6 @@
 			</plugin>
 		</plugins>
 	</build>
-
-	<profiles>
-		<profile>
-			<id>release</id>
-			<properties>
-				<connectionUrl>${scm-base}/tags/${project.artifactId}-${project.version}</connectionUrl>
-			</properties>
-		</profile>
-	</profiles>
 
 
 </project>
