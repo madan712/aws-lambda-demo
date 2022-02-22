@@ -56,8 +56,10 @@
 	</distributionManagement>
 
 	<scm>
+		<url>https://github.com/madan712/aws-lambda-demo</url>
 		<connection>scm:git:ssh://git@github.com/madan712/aws-lambda-demo.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/madan712/aws-lambda-demo.git</developerConnection>
+		<tag>HEAD</tag>
 	</scm>
 
 	<build>
