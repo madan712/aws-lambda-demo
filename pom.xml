@@ -110,7 +110,7 @@
 
 	<scm>
 		<connection>scm:git:ssh://git@github.com/madan712/aws-lambda-demo.git</connection>
-		<developerConnection>scm:git:ssh://github.com/madan712/aws-lambda-demo</developerConnection>
+		<developerConnection>scm:git:ssh://git@github.com/madan712/aws-lambda-demo.git</developerConnection>
 	</scm>
 
 </project>
