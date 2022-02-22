@@ -58,7 +58,7 @@
 	<scm>
 		<url>https://github.com/madan712/aws-lambda-demo</url>
 		<connection>scm:git:ssh://git@github.com/madan712/aws-lambda-demo.git</connection>
-		<developerConnection>scm:git:git@github.com/madan712/aws-lambda-demo.git</developerConnection>
+		<developerConnection>scm:git:ssh://git@github.com/madan712/aws-lambda-demo.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 
@@ -98,6 +98,10 @@
 				<version>2.5.3</version>
 				<configuration>
 					<tagBase>https://github.com/madan712/aws-lambda-demo/tags</tagBase>
+					<tagNameFormat>@{project.artifactId}-@{project.version}</tagNameFormat>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+					<releaseProfiles>release</releaseProfiles>
+					<allowTimestampedSnapshots>true</allowTimestampedSnapshots>
 				</configuration>
 			</plugin>
 
@@ -116,6 +120,15 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>release</id>
+			<properties>
+				<connectionUrl>${scm-base}/tags/${project.artifactId}-${project.version}</connectionUrl>
+			</properties>
+		</profile>
+	</profiles>
 
 
 </project>
