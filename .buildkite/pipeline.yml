@@ -1,5 +1,5 @@
 steps:
   - label: ":package: Deploy step"
-    if: build.message !~ /\[maven-release-plugin]/i
-        plugins:
-            - madan712/maven-terraform:
+    if: "build.message !~ /\[maven-release-plugin]/i"
+    plugins:
+        - madan712/maven-terraform:
