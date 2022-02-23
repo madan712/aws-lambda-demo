@@ -1,3 +1,5 @@
 steps:
   - label: ":package: Deploy step"
-    command: "mvn -B release:clean && mvn -B release:prepare && mvn -B release:perform"
+    plugins:
+        - madan712/maven-terraform:
+            message: build.message
