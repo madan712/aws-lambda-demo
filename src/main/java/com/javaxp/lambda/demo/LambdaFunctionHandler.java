@@ -12,7 +12,7 @@ import com.google.gson.GsonBuilder;
 public class LambdaFunctionHandler
 		implements RequestHandler<APIGatewayProxyRequestEvent, APIGatewayProxyResponseEvent> {
 
-	private static final String GREETING = "Welcome back %s!";
+	private static final String GREETING = "Welcome %s!";
 
 	private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
